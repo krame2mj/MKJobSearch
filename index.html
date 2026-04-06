@@ -6,7 +6,14 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="JobSearchOS">
+<meta name="description" content="AI-powered job search operating system — track applications, scan live jobs, prep for interviews, and manage your network.">
+<meta name="theme-color" content="#0a0a0a">
 <title>JobSearchOS</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/icons/icon-152.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512.png">
 <link href="index_files/css2.css" rel="stylesheet">
 <style>
 :root{--bg:#0a0a0a;--s1:#111;--s2:#1a1a1a;--s3:#222;--b1:#2a2a2a;--b2:#383838;--tx:#e8e8e8;--t2:#888;--t3:#444;--ac:#c8f04a;--ac2:#a8d030;--blue:#4a9eff;--red:#ff5f5f;--amb:#ffb340;--grn:#4adf8a;--pur:#b57bee;--fn:'IBM Plex Sans',sans-serif;--mo:'IBM Plex Mono',monospace;--r:6px;--r2:10px;}
@@ -4070,5 +4077,14 @@ function initLoginScreen(){
 initLoginScreen();
 </script>
 
+<script>
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('/sw.js')
+      .then(r=>console.log('SW registered:',r.scope))
+      .catch(e=>console.log('SW error:',e));
+  });
+}
+</script>
 
 </body></html>
