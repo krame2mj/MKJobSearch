@@ -1,4 +1,4 @@
-const CACHE = 'jobsearchos-v1';
+const CACHE = 'jobsearchos-v3';
 const SHELL = [
   '/',
   '/index.html',
